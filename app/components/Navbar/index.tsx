@@ -31,7 +31,7 @@ const StyledprogressBar = styled.div<{ $progress: number }>`
 
 const Navbar = () => {
 
-    const [scrollProgress, setScrollProgress] = React.useState(25);
+    const [scrollProgress, setScrollProgress] = React.useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -40,7 +40,7 @@ const Navbar = () => {
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
             const scrollBottom = documentHeight - windowHeight;
-            const scrollPercent = ((scrollTop / scrollBottom) * 75) + 25;
+            const scrollPercent = (scrollTop / scrollBottom) * 100;
 
             setScrollProgress(scrollPercent);
 
