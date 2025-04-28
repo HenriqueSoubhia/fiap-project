@@ -14,10 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={``}>
-        <GlobalStyleWrapper>
-          {children}
-        </GlobalStyleWrapper>
+      <body>
+          <GlobalStyleWrapper>
+            {children}
+          </GlobalStyleWrapper>
       </body>
     </html>
   );
