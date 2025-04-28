@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components';
 
@@ -38,9 +37,13 @@ const StyledFigure = styled.figure`
     display: flex;
     flex-direction: column;
     gap: 12px;
-
     font-family: "Roboto";
     font-weight: 400;
+
+    img{
+        cursor: url('/svg/cursor-open.svg'), pointer;
+
+    }
 `
 
 const StyledListDiv = styled.div`
@@ -84,8 +87,47 @@ const StyledTechList = styled.ul`
     
 `
 
+const StyledDialog = styled.dialog`
+    border: none;
+    outline: none;
+    margin: auto auto;
+    
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    button{
+        position: fixed;
+        top: 32px;
+        right: 32px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    img{
+        height: 600px;
+        cursor: url('/svg/cursor-close.svg'), pointer;
+    }
+
+
+
+
+`
+
 
 const AboutSection = () => {
+
+    const dialogRef = React.useRef<HTMLDialogElement>(null);
+
+    const handleDialog = () => {
+        if (!dialogRef.current) return;
+
+        dialogRef.current.open ? dialogRef.current.close() : dialogRef.current.showModal();
+    }
+
     return (
         <StyledSection>
             <StyledH2>educação e tech</StyledH2>
@@ -97,12 +139,14 @@ const AboutSection = () => {
                     </p>
 
                     <StyledFigure>
-                        <img src="/imgs/fiap-next.jpg" alt='Logotipo FIAP Next' />
+                        <img onClick={handleDialog} src="/imgs/fiap-next.jpg" alt='Logotipo FIAP Next' />
 
                         <figcaption>
                             Figura 1 - Logotipo da FIAP NEXT
                         </figcaption>
                     </StyledFigure>
+
+
                 </StyledImageDiv>
 
                 <StyledListDiv>
@@ -145,6 +189,11 @@ const AboutSection = () => {
                 </StyledListDiv>
 
             </StyledArticle>
+
+            <StyledDialog ref={dialogRef}>
+                <button onClick={handleDialog} >x</button>
+                <img onClick={handleDialog} src="/imgs/fiap-next.jpg" alt='Logotipo FIAP Next' />
+            </StyledDialog>
 
 
 
