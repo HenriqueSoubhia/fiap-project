@@ -69,6 +69,16 @@ export const GlobalStyle = createGlobalStyle`
   font-style: normal;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: ${({ theme }) => theme.colors.magenta};
+}
+
+::selection {
+  color: white;
+  background: ${({ theme }) => theme.colors.magenta};
+}
+
 
   /* RESET CSS */
   *, *::before, *::after {
@@ -88,6 +98,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
   }
 
   img, picture, video, canvas, svg {
