@@ -5,21 +5,64 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyle = createGlobalStyle`
 
   /* FONTES */
-
   @font-face {
   font-family: 'GothamHTF';
-  src: url('/fonts/gotham/GothamHTF-Medium.otf') format('opentype');
+  src: url('/fonts/gotham/GothamHTF-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamHTF';
+  src: url('/fonts/gotham/GothamHTF-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamHTF';
+  src: url('/fonts/gotham/GothamHTF-Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'GothamHTF';
+  src: url('/fonts/gotham/GothamHTF-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'GothamHTF';
-    src: url('/fonts/gotham/GothamHTF-Bold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-  }
+@font-face {
+  font-family: 'GothamHTF';
+  src: url('/fonts/gotham/GothamHTF-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamHTF';
+  src: url('/fonts/gotham/GothamHTF-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamHTF';
+  src: url('/fonts/gotham/GothamHTF-Ultra.otf') format('opentype');
+  font-weight: 1000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamHTF';
+  src: url('/fonts/gotham/GothamHTF-XLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+
 
 
   /* RESET CSS */
@@ -35,6 +78,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'GothamHTF', sans-serif;
     background: #fff;
     color: #000;
+    box-sizing: border-box;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
