@@ -10,8 +10,13 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;   
+    height: 8vh;   
     width: 100%;   
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    
+
 `
 
 const Navbar = () => {
