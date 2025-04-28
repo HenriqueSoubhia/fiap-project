@@ -1,6 +1,7 @@
 'use client'
 
 import AboutSection from "./components/AboutSection";
+import AccordionSection from "./components/AccordionSection";
 import HeaderBanner from "./components/HeaderBanner";
 import Navbar from "./components/Navbar";
 import ParallaxSection from "./components/ParallaxSection";
@@ -16,7 +17,7 @@ export default function Home() {
         <HeaderBanner />
         <AboutSection />
         <ParallaxSection />
-        <AboutSection />
+        <AccordionSection />
       </main>
 
     </div>
