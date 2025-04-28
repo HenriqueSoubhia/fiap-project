@@ -80,6 +80,7 @@ export const GlobalStyle = createGlobalStyle`
     color: #000;
     box-sizing: border-box;
     font-size: 16px;
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -78,7 +78,7 @@ const StyledScrollDownImageContainer = styled.div`
 
 const HeaderBanner = () => {
     return (
-        <StyledHeaderBanner>
+        <StyledHeaderBanner id='headerBanner'>
             <StyledHeaderBannerContent>
                 <h1>
                     <StyledTitleSpanPink>
