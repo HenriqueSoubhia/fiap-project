@@ -38,6 +38,9 @@ const StyledFigure = styled.figure`
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    font-family: "Roboto";
+    font-weight: 400;
 `
 
 const StyledListDiv = styled.div`

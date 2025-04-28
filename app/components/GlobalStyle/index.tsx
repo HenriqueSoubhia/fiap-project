@@ -62,7 +62,12 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 
-
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/roboto/roboto-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 
   /* RESET CSS */
