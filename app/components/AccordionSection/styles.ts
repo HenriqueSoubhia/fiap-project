@@ -64,7 +64,7 @@ const StyledSummary = styled.summary<{ $isOpen: boolean }>`
     padding: 10px;
     line-height: 1;
     font-weight: 200;
-    content: ${({ $isOpen }) => ($isOpen ? '－' : '＋')};
+    content: '${({ $isOpen }) => $isOpen ? '－' : '＋'}';
   }
 
   @media (max-width: 768px) {
