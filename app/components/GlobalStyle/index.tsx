@@ -135,4 +135,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
+  /* MEDIA QUERIES*/
+
+  @media (max-width: 768px) {
+    html{
+      font-size: 8px;
+    }
+  }
+
 `

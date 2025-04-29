@@ -13,7 +13,7 @@ const StyledHeaderBanner = styled.header`
     position: relative;
     display: flex;
     justify-content: center;
-`
+    `
 
 const StyledHeaderBannerContent = styled.div`
     background: linear-gradient(90deg, #000000 30%, rgba(16, 16, 16, 0) 100%);
@@ -23,23 +23,23 @@ const StyledHeaderBannerContent = styled.div`
     justify-content: center;
     padding: 0 6rem;
     color: ${({ theme }) => theme.colors.pastelBlue};
-
+    
     h1{
         text-transform: uppercase;
         font-weight: 500;
         font-size: 4rem;
     }
-
+    
     span{
         display: block;
         line-height: 1.5;
     }
-
+    
     p{
         width: 48%;
         font-size: 1rem;
     }
-`
+    `
 
 const StyledTitleSpanPink = styled.span`
     color: transparent;
@@ -61,6 +61,11 @@ const StyledScrollDown = styled.a`
     font-size: .7rem;
     line-height: 3;
     font-weight: 500;
+
+    @media (max-width: 768px) {
+        display: none;
+        
+    }
 
     
 `
