@@ -39,6 +39,16 @@ const StyledFigure = styled.figure`
         cursor: url('/svg/cursor-open.svg'), pointer;
 
     }
+
+    figcaption{
+        font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+        figcaption{
+            font-size: 12px;
+        }
+    }
 `
 
 const StyledListDiv = styled.div`
@@ -59,6 +69,10 @@ const StyledMainList = styled.ul`
         font-weight: 700;
         color: ${({ theme }) => theme.colors.magenta};
     }
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
     
 `
 const StyledTechList = styled.ul`
@@ -78,6 +92,12 @@ const StyledTechList = styled.ul`
             margin-right: 12px;
             font-weight: 700;
             color: ${({ theme }) => theme.colors.magenta};
+        }
+    }
+
+    @media (max-width: 768px) {
+        li{            
+            font-size: 16px;
         }
     }
     

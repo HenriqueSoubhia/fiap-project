@@ -58,6 +58,10 @@ const StyledSummary = styled.summary`
         content: '＋';
     }
 
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+
 
 `
 

@@ -26,6 +26,10 @@ const buttonStyles = css`
     color: white;
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const StyledButton = styled.button`

@@ -24,6 +24,12 @@ const StyledHeading = styled.h1`
     -webkit-text-stroke-color: ${({ theme }) => theme.colors.magenta};
     -webkit-text-stroke-width: 2px;
   }
+
+  @media (max-width: 768px) {
+    &[as="h2"]{
+      font-size: 36px;
+    }
+  }
 `;
 
 const Title = ({ children, headingSize = "h2", variant = "black", ...props }: TitleProps) => {
