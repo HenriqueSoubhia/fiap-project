@@ -4,10 +4,12 @@ import styled from 'styled-components'
 interface AccordionProps {
     title: string
     desc: string
+    handleAccordionToggle: (index: number) => void
+    index: number
+    isOpen: boolean
 }
 
-const StyledAccordion = styled.details`
-
+const StyledAccordion = styled.div<{ $isOpen: boolean }>`
     color: ${({ theme }) => theme.colors.pastelBlue};
     padding: 40px 0;
     border-top-width: 2px;
@@ -20,23 +22,29 @@ const StyledAccordion = styled.details`
         border-bottom: 2px solid ${({ theme }) => theme.colors.davysGrey};
     }
 
-    &[open] {
-        border-top-color: ${({ theme }) => theme.colors.magenta};
-    }
-    
-    &[open] summary::after {
-        content: '－';
+    p {
+        font-size: 18px;
+        padding-top: 40px;
+        color: ${({ theme }) => theme.colors.davysGrey};
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        overflow: hidden;
+        max-height: ${({ $isOpen }: { $isOpen: boolean }) => ($isOpen ? '500px' : '0')};
+        padding: ${({ $isOpen }: { $isOpen: boolean }) => ($isOpen ? '40px 0' : '0 0')};
     }
 
-    p{
-        padding-top: 40px;
-        font-size: 18px;
+    &.open {
+        border-top-color: ${({ theme }) => theme.colors.magenta};
     }
+
+    &.open summary::after {
+        content: '－';
+    }
+    
 
     @media (max-width: 768px) {
         padding: 20px 0;
         width: 100%;
-        p{
+        p {
             font-size: 16px;
         }
     }
@@ -68,7 +76,7 @@ const StyledSummary = styled.summary`
         color: ${({ theme }) => theme.colors.magenta};
         font-size: 20px;
         padding: 10px;
-        line-height:1;
+        line-height: 1;
         font-weight: 200;
         content: '＋';
     }
@@ -76,17 +84,14 @@ const StyledSummary = styled.summary`
     @media (max-width: 768px) {
         font-size: 24px;
     }
-
-
 `
 
-const Accordion = ({ title, desc }: AccordionProps) => {
-
+const Accordion = ({ title, desc, handleAccordionToggle, index, isOpen }: AccordionProps) => {
 
 
     return (
-        <StyledAccordion name='accordion'>
-            <StyledSummary>
+        <StyledAccordion $isOpen={isOpen} className={isOpen ? 'open' : ''}>
+            <StyledSummary onClick={() => handleAccordionToggle(index)}>
                 {title}
             </StyledSummary>
             <p>{desc}</p>

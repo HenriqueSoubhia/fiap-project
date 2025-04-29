@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Accordion from './Accordion'
 import styled from 'styled-components'
 import accordionsContent from './accordionsContent'
@@ -15,13 +15,20 @@ const StyledAccordionSection = styled.section`
 `
 
 const AccordionSection = () => {
+
+  const [accordionOpen, setAccordionOpen] = useState<number | null>(null)
+
+  const handleAccordionToggle = (index: number) => {
+    setAccordionOpen(prevIndex => (prevIndex === index ? null : index))
+  }
+
   return (
     <StyledAccordionSection>
 
       <Title style={{marginBottom: 75}} headingSize='h2' variant='pastelBlue'>nossa estrutura</Title>
 
       {accordionsContent.map((item, index) => (
-        <Accordion key={index} title={item.title} desc={item.desc} />
+        <Accordion key={index} title={item.title} desc={item.desc} index={index} handleAccordionToggle={handleAccordionToggle} isOpen={accordionOpen === index}/>
       ))}
 
 
