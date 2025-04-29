@@ -85,11 +85,15 @@ const ImageModal = () => {
 
     if (dialog.open) {
       gsap.to(dialog, { opacity: 0, duration: 0.5, onComplete: () => dialog.close() });
+      document.body.style.overflow = '';
     } else {
       dialog.show();
       gsap.fromTo(dialog, { opacity: 0, duration: 0.5 }, { opacity: 1 });
+      document.body.style.overflow = 'hidden';
     }
   });
+
+
 
   return (
     <>
