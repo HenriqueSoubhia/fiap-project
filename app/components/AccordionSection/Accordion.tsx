@@ -10,12 +10,18 @@ const StyledAccordion = styled.details`
 
     color: ${({ theme }) => theme.colors.pastelBlue};
     padding: 40px 0;
-    border-top: 2px solid ${({ theme }) => theme.colors.davysGrey};
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: ${({ theme }) => theme.colors.davysGrey};
     width: 85%;
     margin: 0 auto;
-
+    
     &:last-child {
         border-bottom: 2px solid ${({ theme }) => theme.colors.davysGrey};
+    }
+
+    &[open] {
+        border-top-color: ${({ theme }) => theme.colors.magenta};
     }
     
     &[open] summary::after {
