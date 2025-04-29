@@ -82,12 +82,12 @@ export const GlobalStyle = createGlobalStyle`
 
  /* width */
  ::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #48061c;
+  background: #e1b4c3;
 }
 
 ::-webkit-scrollbar-thumb {
