@@ -19,7 +19,7 @@ const StyledAccordionSection = styled.section`
         background-color: rgba(0, 107, 183, 0.2);
         border-radius: 50%;
         z-index: -1;
-        filter: blur(400px);
+        filter: blur(100px);
     }
 
     &:before {
