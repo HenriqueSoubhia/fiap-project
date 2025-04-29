@@ -44,14 +44,14 @@ const StyledLink = styled.a`
 const Button = ({ children, href, onClick, ...props }: ButtonProps) => {
   if (href) {
     return (
-      <StyledLink className='button' {...props} href={href}>
+      <StyledLink {...props} href={href}>
         {children}
       </StyledLink>
     );
   }
 
   return (
-    <StyledButton className='button' {...props} onClick={onClick}>
+    <StyledButton {...props} onClick={onClick}>
       {children}
     </StyledButton>
   );
