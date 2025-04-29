@@ -18,6 +18,11 @@ const StyledScrollBackButton = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: box-shadow 0.3s;
+
+    &:hover{
+        box-shadow: 0 0 10px ${({ theme }) => theme.colors.magenta}; 
+    }
 
 `
 
