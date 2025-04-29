@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Title from '../Title';
+import Paragraph from '../Paragraph';
 
 const StyledSection = styled.section`
     display:flex;
@@ -128,9 +129,9 @@ const AboutSection = () => {
 
             <StyledArticle>
                 <StyledImageDiv>
-                    <p>
+                    <Paragraph>
                         A FIAP é muito mais do que uma faculdade de tecnologia, é um verdadeiro ecossistema de inovação e aprendizado. Conhecida por sua abordagem moderna e focada no mercado, a instituição é referência quando se trata de formar profissionais capacitados para os desafios do futuro. Seja na graduação, pós-graduação ou cursos livres, a FIAP entrega um ensino que mistura teoria e prática, preparando os alunos para atuar em empresas de ponta ou até mesmo empreender.
-                    </p>
+                    </Paragraph>
 
                     <StyledFigure>
                         <img onClick={handleDialog} src="/imgs/fiap-next.jpg" alt='Logotipo FIAP Next' />
@@ -144,9 +145,9 @@ const AboutSection = () => {
                 </StyledImageDiv>
 
                 <StyledListDiv>
-                    <p>
+                    <Paragraph>
                         Com um corpo docente formado por profissionais atuantes no mercado, a FIAP não ensina apenas tecnologia, mas também negócios, inovação e liderança. Seus cursos abrangem diversas áreas, incluindo:
-                    </p>
+                    </Paragraph>
 
 
                     <StyledMainList>
@@ -177,9 +178,9 @@ const AboutSection = () => {
                         </li>
                     </StyledMainList>
 
-                    <p>
+                    <Paragraph>
                         Além disso, a instituição incentiva fortemente o uso dessas metodologias e outras abordagens inovadoras que fazem parte do dia a dia de grandes empresas.
-                    </p>
+                    </Paragraph>
                 </StyledListDiv>
 
             </StyledArticle>

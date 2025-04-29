@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
 import Title from '../Title'
+import Paragraph from '../Paragraph'
 
 const StyledHeaderBanner = styled.header`
     background-image: url('/imgs/header.jpg');
@@ -89,9 +90,9 @@ const HeaderBanner = () => {
                         De tecnologia
                     </StyledTitleSpanNormal>
                 </Title>
-                <p>
+                <Paragraph>
                     Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas.
-                </p>
+                </Paragraph>
             </StyledHeaderBannerContent>
 
             <StyledScrollDown href='#about'>
