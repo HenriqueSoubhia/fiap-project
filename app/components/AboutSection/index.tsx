@@ -51,6 +51,7 @@ const StyledMainList = styled.ul`
     display: flex;
     flex-direction: column;
     gap: 30px;
+    font-size: 20px;
 
     > li::before{
         content: '/';
@@ -69,7 +70,7 @@ const StyledTechList = styled.ul`
     
 
     li{
-        font-size: .9rem;
+        font-size: 18px;
         color: ${({ theme }) => theme.colors.magenta};
         &::before{
             content: '-';

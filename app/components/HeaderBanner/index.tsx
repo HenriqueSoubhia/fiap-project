@@ -55,7 +55,7 @@ const StyledScrollDown = styled.a`
     position: absolute;
     bottom: 80px;
 
-    font-size: .7rem;
+    font-size: 12px;
     line-height: 3;
     font-weight: 500;
 

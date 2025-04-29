@@ -9,14 +9,13 @@ interface AccordionProps {
 const StyledAccordion = styled.details`
 
     color: ${({ theme }) => theme.colors.pastelBlue};
-    position: relative;
-    padding: 1.8rem 0;
-    border-top: 1px solid ${({ theme }) => theme.colors.davysGrey};
+    padding: 40px 0;
+    border-top: 2px solid ${({ theme }) => theme.colors.davysGrey};
     max-width: 85%;
     margin: 0 auto;
 
     &:last-child {
-        border-bottom: 1px solid ${({ theme }) => theme.colors.davysGrey};
+        border-bottom: 2px solid ${({ theme }) => theme.colors.davysGrey};
     }
     
     &[open] summary::after {
@@ -25,6 +24,7 @@ const StyledAccordion = styled.details`
 
     p{
         padding-top: 40px;
+        font-size: 18px;
     }
 `
 
@@ -36,7 +36,7 @@ const StyledSummary = styled.summary`
 
     text-transform: uppercase;
 
-    font-size: 1.2rem;
+    font-size: 25px;
     font-weight: 700;
 
     cursor: pointer;
