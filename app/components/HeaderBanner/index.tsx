@@ -47,7 +47,7 @@ const StyledTitleSpanPink = styled.span`
     -webkit-text-stroke-width: 2px;
 `
 
-const StyledScrollDown = styled.div`
+const StyledScrollDown = styled.a`
 
     display: flex;
     flex-direction: column;
@@ -93,7 +93,7 @@ const HeaderBanner = () => {
                 </p>
             </StyledHeaderBannerContent>
 
-            <StyledScrollDown>
+            <StyledScrollDown href='#about'>
                 <small>scroll down</small>
                 <StyledScrollDownImageContainer>
                     <Image src={"/svg/scroll-down-arrow.svg"} width={16} height={40} alt='icone seta virada para baixo' />

@@ -129,7 +129,7 @@ const AboutSection = () => {
     }
 
     return (
-        <StyledSection>
+        <StyledSection id='about'>
             <StyledH2>educação e tech</StyledH2>
 
             <StyledArticle>
