@@ -23,7 +23,7 @@ const FooterCallToAction = () => {
         Quer saber mais?
       </Title>
 
-      <Button href='/'>Entre em contato</Button>
+      <Button href='/contact'>Entre em contato</Button>
     </StyledFooter>
   );
 };
