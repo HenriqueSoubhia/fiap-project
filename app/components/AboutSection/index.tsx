@@ -24,7 +24,10 @@ const StyledArticle = styled.article`
     padding: 0 90px; 
     gap: 120px;
     color: ${({ theme }) => theme.colors.davysGrey};
-    text-align: justify;
+    
+    p{
+        text-align: justify;
+    }
     
     @media (max-width: 768px) {
         gap: 50px;
