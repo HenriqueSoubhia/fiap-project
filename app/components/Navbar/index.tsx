@@ -14,7 +14,7 @@ const StyledNav = styled.nav`
     width: 100%;   
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 50;
 `
 
 const StyledprogressBar = styled.div<{ $progress: number }>`

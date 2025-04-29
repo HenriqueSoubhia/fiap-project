@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Title from '../Title';
 import Paragraph from '../Paragraph';
+import ImageModal from './ImageModal';
 
 const StyledSection = styled.section`
     display:flex;
@@ -39,28 +40,7 @@ const StyledImageDiv = styled.div`
     gap:50px;
 `
 
-const StyledFigure = styled.figure`
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    font-family: "Roboto";
-    font-weight: 400;
 
-    img{
-        cursor: url('/svg/cursor-open.svg'), pointer;
-
-    }
-
-    figcaption{
-        font-size: 16px;
-    }
-
-    @media (max-width: 768px) {
-        figcaption{
-            font-size: 12px;
-        }
-    }
-`
 
 const StyledListDiv = styled.div`
     display: flex;
@@ -114,44 +94,12 @@ const StyledTechList = styled.ul`
     
 `
 
-const StyledDialog = styled.dialog`
-    border: none;
-    outline: none;
-    margin: auto auto;
-    
-    &::backdrop {
-        background: rgba(0, 0, 0, 0.5);
-    }
 
-    button{
-        position: fixed;
-        top: 32px;
-        right: 32px;
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 3rem;
-        cursor: pointer;
-    }
-
-    img{
-        height: 600px;
-        cursor: url('/svg/cursor-close.svg'), pointer;
-    }
-
-
-`
 
 
 const AboutSection = () => {
 
-    const dialogRef = React.useRef<HTMLDialogElement>(null);
 
-    const handleDialog = () => {
-        if (!dialogRef.current) return;
-
-        dialogRef.current.open ? dialogRef.current.close() : dialogRef.current.showModal();
-    }
 
     return (
         <StyledSection id='about'>
@@ -165,13 +113,7 @@ const AboutSection = () => {
                         A FIAP é muito mais do que uma faculdade de tecnologia, é um verdadeiro ecossistema de inovação e aprendizado. Conhecida por sua abordagem moderna e focada no mercado, a instituição é referência quando se trata de formar profissionais capacitados para os desafios do futuro. Seja na graduação, pós-graduação ou cursos livres, a FIAP entrega um ensino que mistura teoria e prática, preparando os alunos para atuar em empresas de ponta ou até mesmo empreender.
                     </Paragraph>
 
-                    <StyledFigure>
-                        <img onClick={handleDialog} src="/imgs/fiap-next.jpg" alt='Logotipo FIAP Next' />
-
-                        <figcaption>
-                            Figura 1 - Logotipo da FIAP NEXT
-                        </figcaption>
-                    </StyledFigure>
+                    <ImageModal />
 
 
                 </StyledImageDiv>
@@ -217,10 +159,7 @@ const AboutSection = () => {
 
             </StyledArticle>
 
-            <StyledDialog ref={dialogRef}>
-                <button onClick={handleDialog} >x</button>
-                <img onClick={handleDialog} src="/imgs/fiap-next.jpg" alt='Logotipo FIAP Next' />
-            </StyledDialog>
+
 
 
 

@@ -5,7 +5,7 @@ const StyledScrollBackButton = styled.a`
     position: fixed;
     right: 2rem;
     bottom: 2rem;
-    z-index: 1000;
+    z-index: 50;
 
     background-color: transparent;
     border: none;

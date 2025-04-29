@@ -13,7 +13,7 @@ export default function Home() {
 
 
   return (
-    <div >
+    <>
       <Navbar />
 
       <ScrollBackButton />
@@ -27,6 +27,6 @@ export default function Home() {
       </main>
       
 
-    </div>
+    </>
   );
 }
