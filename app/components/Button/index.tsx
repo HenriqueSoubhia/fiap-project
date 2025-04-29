@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -43,10 +43,18 @@ const StyledLink = styled.a`
 
 const Button = ({ children, href, onClick, ...props }: ButtonProps) => {
   if (href) {
-    return <StyledLink className="button" {...props} href={href}>{children}</StyledLink>;
+    return (
+      <StyledLink className='button' {...props} href={href}>
+        {children}
+      </StyledLink>
+    );
   }
 
-  return <StyledButton className="button" {...props} onClick={onClick}>{children}</StyledButton>;
+  return (
+    <StyledButton className='button' {...props} onClick={onClick}>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;

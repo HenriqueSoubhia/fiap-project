@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import { ReactNode } from 'react';
+import styled from 'styled-components';
 
 interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
   children: ReactNode;
-  variant?: "black" | "pastelBlue" | "outline-pink";
-  headingSize?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  variant?: 'black' | 'pastelBlue' | 'outline-pink';
+  headingSize?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
 const StyledHeading = styled.h1`
@@ -12,7 +12,7 @@ const StyledHeading = styled.h1`
   text-transform: uppercase;
   font-weight: 500;
 
-  &.black{
+  &.black {
     color: ${({ theme }) => theme.colors.black};
   }
 
@@ -26,16 +26,20 @@ const StyledHeading = styled.h1`
   }
 
   @media (max-width: 768px) {
-    &.h1{
+    &.h1 {
       font-size: 40px;
     }
-    &.h2, &.h3, &.h4, &.h5, &.h6{
+    &.h2,
+    &.h3,
+    &.h4,
+    &.h5,
+    &.h6 {
       font-size: 36px;
     }
   }
 `;
 
-const Title = ({ children, headingSize = "h2", variant = "black", ...props }: TitleProps) => {
+const Title = ({ children, headingSize = 'h2', variant = 'black', ...props }: TitleProps) => {
   return (
     <StyledHeading {...props} className={`${variant} ${headingSize}`} as={headingSize}>
       {children}

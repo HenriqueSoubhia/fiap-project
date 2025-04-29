@@ -1,16 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const StyledParallaxSection = styled.section`
-    height: 70vh;
-    background-image: url('/imgs/break-image.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-`
+  height: 70vh;
+  background-image: url('/imgs/break-image.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
 
 const ParallaxSection = () => {
-  return <StyledParallaxSection/>      
-}
+  return <StyledParallaxSection />;
+};
 
-export default ParallaxSection
+export default ParallaxSection;

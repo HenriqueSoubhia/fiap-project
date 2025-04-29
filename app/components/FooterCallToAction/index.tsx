@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import Button from "../Button"
-import Title from "../Title"
+import styled from 'styled-components';
+import Button from '../Button';
+import Title from '../Title';
 
 const StyledFooter = styled.footer`
   background-color: ${({ theme }) => theme.colors.black};
@@ -14,20 +14,18 @@ const StyledFooter = styled.footer`
   @media (max-width: 768px) {
     padding: 100px 24px;
   }
-`
-
+`;
 
 const FooterCallToAction = () => {
   return (
     <StyledFooter>
+      <Title style={{ marginBottom: 75 }} headingSize='h2' variant='pastelBlue'>
+        Quer saber mais?
+      </Title>
 
-      <Title style={{marginBottom: 75}} headingSize='h2' variant='pastelBlue'>Quer saber mais?</Title>
-
-
-      <Button href="/">Entre em contato</Button>
-
+      <Button href='/'>Entre em contato</Button>
     </StyledFooter>
-  )
-}
+  );
+};
 
-export default FooterCallToAction
+export default FooterCallToAction;

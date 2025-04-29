@@ -1,23 +1,19 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface ParagraphProps extends React.HTMLProps<HTMLParagraphElement> {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const StyledParagraph = styled.p`
-    font-size: 16px;
+  font-size: 16px;
 
-    @media (max-width: 768px) {
-        font-size: 18px;
-    }
-`
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
 
 const Paragraph = ({ children, ...props }: ParagraphProps) => {
-    return (
-        <StyledParagraph {...props}>
-            {children}
-        </StyledParagraph>
-    )
-}
+  return <StyledParagraph {...props}>{children}</StyledParagraph>;
+};
 
-export default Paragraph
+export default Paragraph;
