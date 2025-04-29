@@ -57,6 +57,7 @@ const StyledDialog = styled.dialog`
     color: white;
     font-size: 3rem;
     cursor: pointer;
+    outline: none;
     z-index: 101;
   }
 
