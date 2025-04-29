@@ -8,6 +8,10 @@ const StyledAccordionSection = styled.section`
     padding: 200px 90px;
     background-color: ${({ theme }) => theme.colors.black};
     position: relative;
+
+    @media (max-width: 768px) {
+        padding: 100px 24px;
+    }
 `
 
 const AccordionSection = () => {

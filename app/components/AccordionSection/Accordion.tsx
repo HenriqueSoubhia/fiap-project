@@ -11,7 +11,7 @@ const StyledAccordion = styled.details`
     color: ${({ theme }) => theme.colors.pastelBlue};
     padding: 40px 0;
     border-top: 2px solid ${({ theme }) => theme.colors.davysGrey};
-    max-width: 85%;
+    width: 85%;
     margin: 0 auto;
 
     &:last-child {
@@ -25,6 +25,14 @@ const StyledAccordion = styled.details`
     p{
         padding-top: 40px;
         font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 20px 0;
+        width: 100%;
+        p{
+            font-size: 16px;
+        }
     }
 `
 
@@ -46,13 +54,14 @@ const StyledSummary = styled.summary`
         border-style: solid;
         border-width: 2px;
         border-radius: 50%;
-        width: 2rem;
-        height: 2rem;
+        width: 40px;
+        height: 40px;
         justify-content: center;
         align-items: center;
         display: flex;
         color: ${({ theme }) => theme.colors.magenta};
-        font-size: 1.5rem;
+        font-size: 20px;
+        padding: 10px;
         line-height:1;
         font-weight: 200;
         content: '＋';

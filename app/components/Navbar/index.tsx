@@ -10,7 +10,7 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8vh;   
+    height: 80px;   
     width: 100%;   
     position: fixed;
     top: 0;

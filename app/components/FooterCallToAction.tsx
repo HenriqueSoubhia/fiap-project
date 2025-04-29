@@ -9,6 +9,11 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   align-items: center;
   padding: 120px 0;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 100px 24px;
+  }
 `
 
 

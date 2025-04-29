@@ -29,6 +29,7 @@ const buttonStyles = css`
 
   @media (max-width: 768px) {
     font-size: 20px;
+    padding: 20px 50px;
   }
 `;
 
@@ -42,10 +43,10 @@ const StyledLink = styled.a`
 
 const Button = ({ children, href, onClick, ...props }: ButtonProps) => {
   if (href) {
-    return <StyledLink {...props} href={href}>{children}</StyledLink>;
+    return <StyledLink className="button" {...props} href={href}>{children}</StyledLink>;
   }
 
-  return <StyledButton {...props} onClick={onClick}>{children}</StyledButton>;
+  return <StyledButton className="button" {...props} onClick={onClick}>{children}</StyledButton>;
 };
 
 export default Button;

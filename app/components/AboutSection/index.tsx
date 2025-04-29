@@ -6,9 +6,14 @@ import Paragraph from '../Paragraph';
 const StyledSection = styled.section`
     display:flex;
     flex-direction:column;
-    gap: 3rem;
-    padding: 200px 90px;
+    gap: 75px;
+    padding: 200px 128px;
     background-color: ${({ theme }) => theme.colors.cultured};
+    
+    @media (max-width: 768px) {
+        gap: 50px;
+        padding: 100px 24px;
+    }
 `;
 
 
@@ -19,6 +24,12 @@ const StyledArticle = styled.article`
     gap: 120px;
     color: ${({ theme }) => theme.colors.davysGrey};
     text-align: justify;
+    
+    @media (max-width: 768px) {
+        gap: 50px;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
 
 `
 

@@ -5,25 +5,54 @@ import Title from '../Title'
 import Paragraph from '../Paragraph'
 
 const StyledHeaderBanner = styled.header`
-    background-image: url('/imgs/header.jpg');
+    .headerBanner-paragraph-desktop{
+        width: 65%;
+    }
+
+    .headerBanner-paragraph-mobile{
+        display: none;
+        padding: 30px 24px;
+        background-color: ${({ theme }) => theme.colors.black};
+        color: ${({ theme }) => theme.colors.pastelBlue};
+    }
+
+    @media (max-width: 768px) {
+        .headerBanner-paragraph-desktop{
+            display: none;
+        }
+        .headerBanner-paragraph-mobile{
+            display: block;
+        }
+    }
+
+`
+
+const StyledHeaderBannerContainer = styled.div`
+
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position:  25% center;
-    height: 85vh;
-    margin-top: 1rem;
+    background-size: cover;
+    margin-top: 80px;
     width: 100%;    
     position: relative;
     display: flex;
     justify-content: center;
-`
+    padding-top: 274px;
+    padding-bottom: 248px;
+    background-image: linear-gradient(90deg, #000000 30%, rgba(16, 16, 16, 0) 100%), url('/imgs/header.jpg');
+
+
+    @media (max-width: 768px) {
+        padding: 65px 0;
+    }
+    
+    `
 
 const StyledHeaderBannerContent = styled.div`
-    background: linear-gradient(90deg, #000000 30%, rgba(16, 16, 16, 0) 100%);
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 6rem;
+    padding: 0 128px;
     color: ${({ theme }) => theme.colors.pastelBlue};
     
     
@@ -32,11 +61,12 @@ const StyledHeaderBannerContent = styled.div`
         line-height: 1.5;
     }
     
-    p{
-        width: 48%;
-        font-size: 1rem;
+
+    @media (max-width: 768px) {
+        padding: 0 24px;
     }
-    `
+
+`
 
 const StyledTitleSpanNormal = styled.span`
     color: ${({ theme }) => theme.colors.pastelBlue};
@@ -81,27 +111,31 @@ const StyledScrollDownImageContainer = styled.div`
 const HeaderBanner = () => {
     return (
         <StyledHeaderBanner id='headerBanner'>
-            <StyledHeaderBannerContent>
-                <Title headingSize='h1' variant='outline-pink'>
-                    <span>
-                        A maior faculdade
-                    </span>
-                    <StyledTitleSpanNormal>
-                        De tecnologia
-                    </StyledTitleSpanNormal>
-                </Title>
-                <Paragraph>
-                    Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas.
-                </Paragraph>
-            </StyledHeaderBannerContent>
+            <StyledHeaderBannerContainer>
+                <StyledHeaderBannerContent>
+                    <Title headingSize='h1' variant='outline-pink'>
+                        <span>
+                            A maior faculdade
+                        </span>
+                        <StyledTitleSpanNormal>
+                            De tecnologia
+                        </StyledTitleSpanNormal>
+                    </Title>
+                    <Paragraph className='headerBanner-paragraph-desktop'>
+                        Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas.
+                    </Paragraph>
+                </StyledHeaderBannerContent>
 
-            <StyledScrollDown href='#about'>
-                <small>scroll down</small>
-                <StyledScrollDownImageContainer>
-                    <Image src={"/svg/scroll-down-arrow.svg"} width={16} height={40} alt='icone seta virada para baixo' />
-                </StyledScrollDownImageContainer>
-            </StyledScrollDown>
-
+                <StyledScrollDown href='#about'>
+                    <small>scroll down</small>
+                    <StyledScrollDownImageContainer>
+                        <Image src={"/svg/scroll-down-arrow.svg"} width={16} height={40} alt='icone seta virada para baixo' />
+                    </StyledScrollDownImageContainer>
+                </StyledScrollDown>
+            </StyledHeaderBannerContainer>
+            <Paragraph className='headerBanner-paragraph-mobile'>
+                Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas.
+            </Paragraph>
         </StyledHeaderBanner>
     )
 }
