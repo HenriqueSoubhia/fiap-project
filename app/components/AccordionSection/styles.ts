@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 const StyledAccordion = styled.div<{ $isOpen: boolean }>`
   color: ${({ theme }) => theme.colors.pastelBlue};
-  padding: 40px 0;
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: ${({ theme, $isOpen }) =>
     $isOpen ? theme.colors.magenta : theme.colors.davysGrey};
-  width: 100%;
+  width: 85%;
   margin: 0 auto;
 
   &:last-child {
@@ -15,15 +14,14 @@ const StyledAccordion = styled.div<{ $isOpen: boolean }>`
   }
 
   p {
-    font-size: 16px;
-    padding-top: 40px;
+    font-size: 20px;
     transition:
       max-height 0.5s ease-in-out,
       padding 0.5s ease-in-out;
     overflow: hidden;
     color: ${({ theme }) => theme.colors.davysGrey};
     max-height: ${({ $isOpen }: { $isOpen: boolean }) => ($isOpen ? '500px' : '0')};
-    padding: ${({ $isOpen }: { $isOpen: boolean }) => ($isOpen ? '40px 0' : '0 0')};
+    padding-bottom: ${({ $isOpen }: { $isOpen: boolean }) => ($isOpen ? '40px' : '0')};
   }
 
   @media (max-width: 768px) {
@@ -36,6 +34,7 @@ const StyledAccordion = styled.div<{ $isOpen: boolean }>`
 `;
 
 const StyledSummary = styled.summary<{ $isOpen: boolean }>`
+  padding: 40px 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
