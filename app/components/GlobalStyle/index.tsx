@@ -80,6 +80,21 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 
+ /* width */
+ ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #48061c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: ${({ theme }) => theme.colors.magenta};
+  border-radius: 10px;
+}
+
   /* RESET CSS */
   *, *::before, *::after {
     margin: 0;
