@@ -9,6 +9,7 @@ const StyledAccordionSection = styled.section`
     background-color: ${({ theme }) => theme.colors.black};
     position: relative;
     z-index: 1;
+    overflow: hidden;
 
     &:before, &:after {
         content: '';

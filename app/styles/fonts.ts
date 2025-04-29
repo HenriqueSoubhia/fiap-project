@@ -43,7 +43,6 @@ export const GothamHTF = localFont({
             style: 'normal',
         },
     ],
-    variable: '--font-gothamhtf',
     display: 'swap',
 })
 
@@ -55,7 +54,6 @@ export const Roboto = localFont({
             style: 'normal',
         },
     ],
-    variable: '--font-roboto',
     display: 'swap',
 })
 

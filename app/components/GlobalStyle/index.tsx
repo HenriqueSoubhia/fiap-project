@@ -41,7 +41,7 @@ export const GlobalStyle = createGlobalStyle`
   html, body {
     height: 100%;
     width: 100%;
-    font-family: var(--font-gothamhtf), sans-serif;
+    font-family: 'GothamHTF', sans-serif;
     background: #fff;
     color: #000;
     box-sizing: border-box;
