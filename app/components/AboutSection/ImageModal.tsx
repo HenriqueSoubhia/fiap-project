@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 const StyledFigure = styled.figure`
     display: flex;
     flex-direction: column;
@@ -74,13 +78,28 @@ const StyledDialog = styled.dialog`
 `
 
 const ImageModal = () => {
-    const dialogRef = React.useRef<HTMLDialogElement>(null);
+    const dialogRef = useRef<HTMLDialogElement>(null);
 
-    const handleDialog = () => {
-        if (!dialogRef.current) return;
+    const { contextSafe } = useGSAP({ scope: dialogRef });
 
-        dialogRef.current.open ? dialogRef.current.close() : dialogRef.current.show();
-    }
+    const handleDialog = contextSafe(() => {
+        const dialog = dialogRef.current;
+        if (!dialog) return;
+
+        if (dialog.open) {
+            gsap.to(dialog, { opacity: 0, duration: .5, onComplete: () => dialog.close() })
+
+        } else {
+            dialog.show()
+            gsap.fromTo(dialog, { opacity: 0, duration: .5 }, {opacity: 1})
+        }
+
+    })
+
+
+    
+
+
     return (
         <>
             <StyledFigure>
@@ -90,10 +109,10 @@ const ImageModal = () => {
                     Figura 1 - Logotipo da FIAP NEXT
                 </figcaption>
             </StyledFigure>
-            <StyledDialog ref={dialogRef}>
+            <StyledDialog open ref={dialogRef}>
                 <button onClick={handleDialog} >x</button>
                 <img onClick={handleDialog} src="/imgs/fiap-next.jpg" alt='Logotipo FIAP Next' />
-            </StyledDialog> 
+            </StyledDialog>
 
         </>
     )
