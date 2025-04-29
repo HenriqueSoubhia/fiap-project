@@ -9,7 +9,7 @@ const StyledFigure = styled.figure`
     display: flex;
     flex-direction: column;
     gap: 12px;
-    font-family: "Roboto";
+    font-family: var(--font-roboto), sans-serif;
     font-weight: 400;
 
     img{
