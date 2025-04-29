@@ -6,6 +6,7 @@ import FooterCallToAction from "@/app/components/FooterCallToAction";
 import HeaderBanner from "@/app/components/HeaderBanner";
 import Navbar from "@/app/components/Navbar";
 import ParallaxSection from "@/app/components/ParallaxSection";
+import ScrollBackButton from "./components/ScrollBackButton";
 
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
   return (
     <div >
       <Navbar />
+
+      <ScrollBackButton />
+
       <main>
         <HeaderBanner />
         <AboutSection />
