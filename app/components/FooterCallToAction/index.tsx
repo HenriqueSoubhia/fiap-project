@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import Button from "./Button"
-import Title from "./Title"
+import Button from "../Button"
+import Title from "../Title"
 
 const StyledFooter = styled.footer`
   background-color: ${({ theme }) => theme.colors.black};
