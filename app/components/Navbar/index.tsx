@@ -24,7 +24,6 @@ const StyledprogressBar = styled.div<{ $progress: number }>`
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease-in-out;
 `
 
 
