@@ -36,7 +36,7 @@ const StyledHeaderBannerContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 220px;
+  padding-top: 160px;
   padding-bottom: 200px;
   background-image:
     linear-gradient(90deg, #000000 30%, rgba(16, 16, 16, 0) 100%), url('/imgs/header.jpg');
