@@ -99,7 +99,7 @@ const StyledTechList = styled.ul`
 
 const AboutSection = () => {
 
-
+    
 
     return (
         <StyledSection id='about'>

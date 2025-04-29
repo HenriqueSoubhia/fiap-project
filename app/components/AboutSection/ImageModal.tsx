@@ -90,7 +90,7 @@ const ImageModal = () => {
                     Figura 1 - Logotipo da FIAP NEXT
                 </figcaption>
             </StyledFigure>
-            <StyledDialog ref={dialogRef} open>
+            <StyledDialog ref={dialogRef}>
                 <button onClick={handleDialog} >x</button>
                 <img onClick={handleDialog} src="/imgs/fiap-next.jpg" alt='Logotipo FIAP Next' />
             </StyledDialog> 

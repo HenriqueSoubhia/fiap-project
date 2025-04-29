@@ -4,10 +4,15 @@ import styled from 'styled-components'
 import Title from '../Title'
 import Paragraph from '../Paragraph'
 
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 const StyledHeaderBanner = styled.header`
     .headerBanner-paragraph-desktop{
         width: 65%;
     }
+
 
     .headerBanner-paragraph-mobile{
         display: none;
@@ -40,6 +45,7 @@ const StyledHeaderBannerContainer = styled.div`
     padding-top: 274px;
     padding-bottom: 248px;
     background-image: linear-gradient(90deg, #000000 30%, rgba(16, 16, 16, 0) 100%), url('/imgs/header.jpg');
+    background-color: ${({ theme }) => theme.colors.black};
 
 
     @media (max-width: 768px) {
@@ -109,24 +115,38 @@ const StyledScrollDownImageContainer = styled.div`
 `
 
 const HeaderBanner = () => {
+
+    const container = useRef<HTMLDivElement>(null);
+
+    useGSAP(() => {
+
+        const tl = gsap.timeline({ stagger: 0.2 });
+
+        const fadeInLeftElements = gsap.utils.toArray('.fade-in-left');
+
+        tl.from(fadeInLeftElements, { x: -150, opacity: 0, duration: 1, stagger: { each: 0.5 } })
+            .from('.fade-in', { opacity: 0, duration: 1}, '<50%');
+
+    }, { scope: container });
+
     return (
         <StyledHeaderBanner id='headerBanner'>
-            <StyledHeaderBannerContainer>
+            <StyledHeaderBannerContainer ref={container}>
                 <StyledHeaderBannerContent>
                     <Title headingSize='h1' variant='outline-pink'>
-                        <span>
+                        <span className='fade-in-left'>
                             A maior faculdade
                         </span>
-                        <StyledTitleSpanNormal>
+                        <StyledTitleSpanNormal className='fade-in-left'>
                             De tecnologia
                         </StyledTitleSpanNormal>
                     </Title>
-                    <Paragraph className='headerBanner-paragraph-desktop'>
+                    <Paragraph className='headerBanner-paragraph-desktop fade-in-left'>
                         Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas.
                     </Paragraph>
                 </StyledHeaderBannerContent>
 
-                <StyledScrollDown href='#about'>
+                <StyledScrollDown className='fade-in' href='#about'>
                     <small>scroll down</small>
                     <StyledScrollDownImageContainer>
                         <Image src={"/svg/scroll-down-arrow.svg"} width={16} height={40} alt='icone seta virada para baixo' />
