@@ -42,8 +42,8 @@ const StyledHeaderBannerContainer = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
-    padding-top: 274px;
-    padding-bottom: 248px;
+    padding-top: 220px;
+    padding-bottom: 200px;
     background-image: linear-gradient(90deg, #000000 30%, rgba(16, 16, 16, 0) 100%), url('/imgs/header.jpg');
     background-color: ${({ theme }) => theme.colors.black};
 
@@ -58,7 +58,7 @@ const StyledHeaderBannerContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 128px;
+    padding: 0 100px;
     color: ${({ theme }) => theme.colors.pastelBlue};
     
     

@@ -15,7 +15,7 @@ const StyledAccordion = styled.div<{ $isOpen: boolean }>`
     border-top-width: 2px;
     border-top-style: solid;
     border-top-color: ${({ theme }) => theme.colors.davysGrey};
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     
     &:last-child {
@@ -23,7 +23,7 @@ const StyledAccordion = styled.div<{ $isOpen: boolean }>`
     }
 
     p {
-        font-size: 18px;
+        font-size: 16px;
         padding-top: 40px;
         color: ${({ theme }) => theme.colors.davysGrey};
         transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
@@ -58,7 +58,7 @@ const StyledSummary = styled.summary`
 
     text-transform: uppercase;
 
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
 
     cursor: pointer;

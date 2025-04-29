@@ -19,7 +19,7 @@ const buttonStyles = css`
   text-align: center;
   text-decoration: none;
 
-  font-size: 30px;
+  font-size: 24px;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.magenta};

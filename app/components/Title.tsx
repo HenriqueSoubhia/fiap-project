@@ -8,7 +8,7 @@ interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
 }
 
 const StyledHeading = styled.h1`
-  font-size: 5rem;
+  font-size: 64px;
   text-transform: uppercase;
   font-weight: 500;
 
@@ -26,7 +26,10 @@ const StyledHeading = styled.h1`
   }
 
   @media (max-width: 768px) {
-    &[as="h2"]{
+    &.h1{
+      font-size: 40px;
+    }
+    &.h2, &.h3, &.h4, &.h5, &.h6{
       font-size: 36px;
     }
   }
@@ -34,7 +37,7 @@ const StyledHeading = styled.h1`
 
 const Title = ({ children, headingSize = "h2", variant = "black", ...props }: TitleProps) => {
   return (
-    <StyledHeading {...props} className={variant} as={headingSize}>
+    <StyledHeading {...props} className={`${variant} ${headingSize}`} as={headingSize}>
       {children}
     </StyledHeading>
   );

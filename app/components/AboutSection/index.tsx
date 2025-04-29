@@ -8,7 +8,7 @@ const StyledSection = styled.section`
     display:flex;
     flex-direction:column;
     gap: 75px;
-    padding: 200px 128px;
+    padding: 160px 100px;
     background-color: ${({ theme }) => theme.colors.cultured};
     
     @media (max-width: 768px) {
@@ -21,8 +21,8 @@ const StyledSection = styled.section`
 const StyledArticle = styled.article`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 90px; 
-    gap: 120px;
+    padding: 0 72px; 
+    gap: 96px;
     color: ${({ theme }) => theme.colors.davysGrey};
     
     p{
