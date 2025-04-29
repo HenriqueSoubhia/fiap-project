@@ -29,6 +29,7 @@ const StyledFigure = styled.figure`
 `
 
 const StyledDialog = styled.dialog`
+
     border: none;
     outline: none;
 
@@ -96,8 +97,6 @@ const ImageModal = () => {
 
     })
 
-
-    
 
 
     return (

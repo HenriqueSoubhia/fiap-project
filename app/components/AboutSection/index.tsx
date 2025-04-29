@@ -102,7 +102,7 @@ const StyledTechList = styled.ul`
 
 const AboutSection = () => {
 
-    
+
 
     return (
         <StyledSection id='about'>
@@ -130,7 +130,6 @@ const AboutSection = () => {
                     <StyledMainList>
                         <li>
                             Tecnologia e Desenvolvimento
-
                             <StyledTechList>
                                 <li>
                                     Desenvolvimento de Software
@@ -141,7 +140,6 @@ const AboutSection = () => {
                                 <li>
                                     Data Science
                                 </li>
-
                                 <li>
                                     Cibersegurança
                                 </li>

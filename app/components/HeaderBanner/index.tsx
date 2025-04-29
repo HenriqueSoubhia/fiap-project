@@ -13,7 +13,6 @@ const StyledHeaderBanner = styled.header`
         width: 65%;
     }
 
-
     .headerBanner-paragraph-mobile{
         display: none;
         padding: 30px 24px;

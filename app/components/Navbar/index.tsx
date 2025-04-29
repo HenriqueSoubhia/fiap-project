@@ -45,6 +45,8 @@ const Navbar = () => {
 
         };
 
+        handleScroll()
+
         window.addEventListener('scroll', handleScroll);
 
         return () => {

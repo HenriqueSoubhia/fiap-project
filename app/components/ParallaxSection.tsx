@@ -1,4 +1,3 @@
-"use client"
 import styled from 'styled-components'
 
 const StyledParallaxSection = styled.section`
@@ -11,11 +10,7 @@ const StyledParallaxSection = styled.section`
 `
 
 const ParallaxSection = () => {
-  return (
-    <StyledParallaxSection>
-      
-    </StyledParallaxSection>
-  )
+  return <StyledParallaxSection/>      
 }
 
 export default ParallaxSection

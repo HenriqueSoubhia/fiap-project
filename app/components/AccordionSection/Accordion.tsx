@@ -31,7 +31,7 @@ const StyledAccordion = styled.div<{ $isOpen: boolean }>`
         max-height: ${({ $isOpen }: { $isOpen: boolean }) => ($isOpen ? '500px' : '0')};
         padding: ${({ $isOpen }: { $isOpen: boolean }) => ($isOpen ? '40px 0' : '0 0')};
     }
-
+    
     &.open {
         border-top-color: ${({ theme }) => theme.colors.magenta};
     }
@@ -57,6 +57,7 @@ const StyledSummary = styled.summary`
     align-items: center;
 
     text-transform: uppercase;
+    user-select: none;
 
     font-size: 20px;
     font-weight: 700;
