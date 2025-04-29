@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import Title from '../Title';
 
 const StyledSection = styled.section`
     display:flex;
@@ -9,13 +10,6 @@ const StyledSection = styled.section`
     background-color: ${({ theme }) => theme.colors.cultured};
 `;
 
-const StyledH2 = styled.h2`
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: ${({ theme }) => theme.colors.black};
-
-`
 
 const StyledArticle = styled.article`
     display: grid;
@@ -113,8 +107,6 @@ const StyledDialog = styled.dialog`
     }
 
 
-
-
 `
 
 
@@ -130,7 +122,9 @@ const AboutSection = () => {
 
     return (
         <StyledSection id='about'>
-            <StyledH2>educação e tech</StyledH2>
+
+            <Title headingSize='h2' variant='black'>educação e tech</Title>
+
 
             <StyledArticle>
                 <StyledImageDiv>

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
+import Title from '../Title'
 
 const StyledHeaderBanner = styled.header`
     background-image: url('/imgs/header.jpg');
@@ -13,7 +14,7 @@ const StyledHeaderBanner = styled.header`
     position: relative;
     display: flex;
     justify-content: center;
-    `
+`
 
 const StyledHeaderBannerContent = styled.div`
     background: linear-gradient(90deg, #000000 30%, rgba(16, 16, 16, 0) 100%);
@@ -24,11 +25,6 @@ const StyledHeaderBannerContent = styled.div`
     padding: 0 6rem;
     color: ${({ theme }) => theme.colors.pastelBlue};
     
-    h1{
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 4rem;
-    }
     
     span{
         display: block;
@@ -41,10 +37,10 @@ const StyledHeaderBannerContent = styled.div`
     }
     `
 
-const StyledTitleSpanPink = styled.span`
-    color: transparent;
-    -webkit-text-stroke-color: ${({ theme }) => theme.colors.magenta};
-    -webkit-text-stroke-width: 2px;
+const StyledTitleSpanNormal = styled.span`
+    color: ${({ theme }) => theme.colors.pastelBlue};
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 0;
 `
 
 const StyledScrollDown = styled.a`
@@ -85,14 +81,14 @@ const HeaderBanner = () => {
     return (
         <StyledHeaderBanner id='headerBanner'>
             <StyledHeaderBannerContent>
-                <h1>
-                    <StyledTitleSpanPink>
-                        A maior faculdade
-                    </StyledTitleSpanPink>
+                <Title headingSize='h1' variant='outline-pink'>
                     <span>
-                        De tecnologia
+                        A maior faculdade
                     </span>
-                </h1>
+                    <StyledTitleSpanNormal>
+                        De tecnologia
+                    </StyledTitleSpanNormal>
+                </Title>
                 <p>
                     Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas.
                 </p>

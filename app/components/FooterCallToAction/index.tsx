@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Button from "../Button"
+import Title from "../Title"
 
 const StyledFooter = styled.footer`
   background-color: ${({ theme }) => theme.colors.black};
@@ -10,19 +11,13 @@ const StyledFooter = styled.footer`
   padding: 120px 0;
 `
 
-const StyledH2 = styled.h2`
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: ${({ theme }) => theme.colors.pastelBlue};
-    margin-bottom: 3.5rem;
-
-`
 
 const FooterCallToAction = () => {
   return (
     <StyledFooter>
-      <StyledH2>Quer saber mais?</StyledH2>
+
+      <Title style={{marginBottom: 75}} headingSize='h2' variant='pastelBlue'>Quer saber mais?</Title>
+
 
       <Button href="/">Entre em contato</Button>
 
