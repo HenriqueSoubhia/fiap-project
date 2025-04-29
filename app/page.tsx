@@ -1,10 +1,11 @@
 'use client'
 
-import AboutSection from "./components/AboutSection";
-import AccordionSection from "./components/AccordionSection";
-import HeaderBanner from "./components/HeaderBanner";
-import Navbar from "./components/Navbar";
-import ParallaxSection from "./components/ParallaxSection";
+import AboutSection from "@/app/components/AboutSection";
+import AccordionSection from "@/app/components/AccordionSection";
+import FooterCallToAction from "@/app/components/FooterCallToAction";
+import HeaderBanner from "@/app/components/HeaderBanner";
+import Navbar from "@/app/components/Navbar";
+import ParallaxSection from "@/app/components/ParallaxSection";
 
 
 export default function Home() {
@@ -18,7 +19,9 @@ export default function Home() {
         <AboutSection />
         <ParallaxSection />
         <AccordionSection />
+        <FooterCallToAction/>
       </main>
+      
 
     </div>
   );
